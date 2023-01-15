@@ -16,6 +16,9 @@ class TodoItem extends React.Component {
       this.setState({editing: false})
     }
   }
+    componentWillUnmount () {
+      console.log("Clearning up");
+    }
   render() {
     const completedStyle = {
       fontStyle: "italic",
@@ -31,7 +34,6 @@ class TodoItem extends React.Component {
     } else {
       editMode.display = "none";
     }
-
     return (
       <li id={id} className={styles.item}>
         <div onDoubleClick={this.handleEditing} style={viewMode}>
