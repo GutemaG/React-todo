@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTrash } from "react-icons/fa";
 import styles from "./TodoItem.module.css";
 
 class TodoItem extends React.Component {
@@ -35,7 +36,7 @@ class TodoItem extends React.Component {
       editMode.display = "none";
     }
     return (
-      <li id={id} className={styles.item}>
+      <li key={id} className={styles.item}>
         <div onDoubleClick={this.handleEditing} style={viewMode}>
           <input
             className={styles.checkbox}
@@ -50,7 +51,7 @@ class TodoItem extends React.Component {
               this.props.deleteTodoProps(id);
             }}
           >
-            Delete
+            <FaTrash style={{color: "orangered", fontSize:"16px"}} />
           </button>
           <span style={completed ? completedStyle : null}>{title}</span>
         </div>
