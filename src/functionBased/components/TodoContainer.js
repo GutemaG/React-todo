@@ -3,6 +3,8 @@ import Header from "./Header";
 import InputTodo from "./InputTodo";
 import TodosList from "./TodosList";
 import { v4 as uuidv4 } from "uuid";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function getInitialTodos() {
   const temp = localStorage.getItem("todos");
