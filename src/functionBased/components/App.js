@@ -1,10 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import About from "../pages/About";
-import NoMatch from "../pages/NoMatch";
-import Navbar from "./Navbar";
-import TodoContainer from "./TodoContainer";
+import { Route, Routes } from 'react-router-dom';
+import About from '../pages/About';
+import NoMatch from '../pages/NoMatch';
+import Navbar from './Navbar';
+import TodoContainer from './TodoContainer';
 
-export function App() {
+export default function App() {
   return (
     <>
       <Navbar />

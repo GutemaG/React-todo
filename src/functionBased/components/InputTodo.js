@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
+
 const InputTodo = (props) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
   const handleSubmit = (e) => {
+    // eslint-disable-next-line react/prop-types
+    const { addTodoProps } = props;
     e.preventDefault();
     if (title.trim()) {
-      props.addTodoProps(title);
-      setTitle("")
+      addTodoProps(title);
+      setTitle('');
     } else {
-      alert("Please Write item");
+      alert('Please Write item');
     }
   };
   const onChange = (e) => {
