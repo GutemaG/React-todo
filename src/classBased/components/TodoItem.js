@@ -34,12 +34,6 @@ const TodoItem = (props) => {
     editMode.display = 'none';
   }
 
-  // useEffect(() => (
-  //   () => {
-  //     console.log('Cleaning up...');
-  //   }
-  // ), []);
-
   // eslint-disable-next-line react/prop-types
   const { deleteTodoProps, handleChangeProps, setUpdate } = props;
   return (

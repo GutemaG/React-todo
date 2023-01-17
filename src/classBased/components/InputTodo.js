@@ -25,7 +25,7 @@ class InputTodo extends Component {
         title: '',
       });
     } else {
-      throw new Error('File somethign');
+      throw new Error('File something');
     }
   };
 
